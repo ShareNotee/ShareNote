@@ -1,11 +1,6 @@
-import '@/styles/globals.css'
-import {DevSupport} from "@react-buddy/ide-toolbox-next";
-import {ComponentPreviews, useInitial} from "@/components/dev";
+import "@/styles/globals.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function App({Component, pageProps}) {
-    return <DevSupport ComponentPreviews={ComponentPreviews}
-                       useInitialHook={useInitial}
-    >
-        <Component {...pageProps} />
-    </DevSupport>
+export default function App({ Component, pageProps }) {
+  return <Component {...pageProps} />;
 }
