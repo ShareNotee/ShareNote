@@ -1,0 +1,94 @@
+/* Import the Kanit font if you haven't already */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Kanit', sans-serif;
+    padding: 10px 20px;
+}
+
+.logo img {
+    max-width: 25%;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}
+
+
+.login-button a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #e0e0e0;
+}
+
+/* The thin white border surrounding the Login Button */
+.login-button a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Kanit', sans-serif;
+    font-size: 16px;
+    margin-left: auto;
+    position: relative; /* Add this property to enable pseudo-element positioning */
+    z-index: 1; /* Add z-index to place the text above the pseudo-element */
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 9px 15px;
+}
+
+/* Styling for the hover effect */
+.login-button a:hover {
+    background-color: #fff; /* Change to white background on hover */
+    color: black; /* Change text color to black on hover */
+    border-color: transparent; /* Clear the border color on hover */
+}
+
+/* Add the following rule for the white border fill on hover */
+.login-button a:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 1px solid white; /* Thin white border */
+    border-radius: 5px;
+    z-index: -1; /* Place the pseudo-element behind the button */
+    transition: background-color 0.2s; /* Add a transition for background color */
+}
+
+/* Styling for the hover effect on the white border fill */
+.login-button a:hover:before {
+    background-color: #fff; /* Fill in the border with white on hover */
+}
+
+
+
